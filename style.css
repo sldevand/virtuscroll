@@ -1,9 +1,9 @@
 #container {
-    margin-top: 100px;
+    margin-top: 1vh;
     display: grid;
     align-items: center;
     justify-items: center;
     height: 300px;
     overflow: scroll;
-    border-style: dashed;
+    border-style: groove;
 }

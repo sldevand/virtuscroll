@@ -51,7 +51,7 @@ class VirtualScroll extends HTMLElement {
                 transform:translateY(${offsetY}px);
             }
         </style>`;
-        this.root.appendChild(this.wrapper);
+
 
         let visibleNodesCount = Math.ceil(this.viewportHeight / this.rowHeight) + 2;
         const visibleChildren = this.data.slice(startNode, startNode + visibleNodesCount);
@@ -59,6 +59,8 @@ class VirtualScroll extends HTMLElement {
             let virtualScrollRow = new VirtualScrollRow(rowData);
             this.wrapper.appendChild(virtualScrollRow);
         });
+
+        this.root.appendChild(this.wrapper);
     }
 
     getRowHeight() {

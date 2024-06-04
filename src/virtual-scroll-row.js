@@ -5,8 +5,8 @@ export default class VirtualScrollRow extends HTMLElement {
         this.wrapper = document.createDocumentFragment();
         this.data = data;
     }
-    connectedCallback() {
-        this.root.innerHTML = `
+    buildStyle() {
+        return `
         <style>
             :host {
                 padding: 20px;
@@ -19,7 +19,10 @@ export default class VirtualScrollRow extends HTMLElement {
             }
         </style>
         `;
+    }
 
+    connectedCallback() {
+        this.root.innerHTML = this.buildStyle();
         this.setData(this.data);
         this.root.appendChild(this.wrapper);
     }

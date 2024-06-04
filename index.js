@@ -1,4 +1,4 @@
-import './virtual-scroll.js'
+import './dist/virtual-scroll.min.js'
 
 document.addEventListener('DOMContentLoaded', main);
 function main() {
@@ -21,7 +21,7 @@ function main() {
 
 function createData() {
   let gridData = [];
-  for (let index = 1; index <= 10000; index++) {
+  for (let index = 1; index <= 100000; index++) {
     gridData.push(generateRowData(index));
   }
   return gridData;
