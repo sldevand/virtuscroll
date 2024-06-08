@@ -74,3 +74,5 @@ class VirtualScroll extends HTMLElement {
 }
 
 customElements.define("virtual-scroll", VirtualScroll);
+
+export default VirtualScroll;
